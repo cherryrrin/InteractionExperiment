@@ -91,6 +91,14 @@ body {
             top: 20px;
         }
 
+        .preview-description {
+            margin-bottom: var(--spacing-m);
+            font-size: 14px;
+            color: #555;
+            text-align: center;
+            max-width: 600px;
+        }
+
 .toolkits-data {
     margin-top: var(--spacing-xl);
     display: flex;

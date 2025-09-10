@@ -103,7 +103,7 @@
         }
         
         // Create separate hover handlers outside updateButtonStyle
-        const originalColor = '#007AFF';
+        const originalColor = '#007AFF'
         function handleMouseEnter() {
             const shiftPercentage = controls.colorShift.value / 100;
             testButton.style.backgroundColor = adjustColor(originalColor, shiftPercentage);
