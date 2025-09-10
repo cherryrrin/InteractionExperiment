@@ -1,0 +1,340 @@
+/* **********************************************************
+ * add custom styles after imports below
+ * ********************************************************** */
+
+@import "css/default.css";
+
+/* **********************************************************
+ * to import a font, use the @import option, you can find
+ * lots of font options at fonts.google.com for example.
+ * ********************************************************** */
+
+@import url('https://rsms.me/inter/inter.css');
+
+html {
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* **********************************************************
+ * Customizing
+ *
+ * changes to default settings like colors, typography,
+ * spacing can be made in default.css
+ *
+ * other custom settings, start below
+ *
+ * ********************************************************** */
+
+* {
+    line-height: 115%;
+    font-weight: 400;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+}
+
+.box.gradient-green {
+    background: linear-gradient(to right, #00ff99, #00ccff);
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+@media (orientation: portrait) {
+    * {
+        font-size: 16px;
+    }
+}
+
+
+/* -------------- Experiment 1 ------------------- */
+
+.experiment-one-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-m);
+}
+
+.experiment-one-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: var(--spacing-m);
+}
+
+
+
+/* ---------- PANEL STYLE ----------- */
+
+.controls-panel {
+            background: whitesmoke;
+            padding: var(--spacing-m);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+.preview-area {
+            background: whitesmoke;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 20px;
+        }
+
+.toolkits-data {
+    margin-top: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ---------- CONTROL PANEL STYLESSS ----------- */
+
+.control-group {
+            margin-bottom: var(--spacing-m);
+            padding-bottom: var(--spacing-s);
+            border-bottom: 1.5px solid #cecece5e;
+        }
+        
+.control-group:last-child {
+            border-bottom: none;
+        }
+
+.control-group h4 {
+            padding-bottom: var(--spacing-xs);
+            color: #333;
+            font-weight: 600;
+        }
+        
+.control-item {
+            margin-bottom: var(--spacing-s);
+        }
+
+.control-item label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+.control-item input[type="range"] {
+            width: 100%;
+        }
+
+.control-item .value-display {
+            font-size: 11px;
+            color: #999;
+            text-align: right;
+        }
+
+
+
+/* ------------- test button style ------------ */
+
+.test-button {
+            width: 160px;
+            height: 60px;
+            background: #007AFF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: var(--spacing-m);
+            transition-property: transform, box-shadow, background-color;
+            position: relative;
+            overflow: hidden;
+        }
+        
+.test-button:active {
+            transform: scale(var(--press-scale));
+        }
+
+
+
+
+
+/* ------------ preset style--------------- */
+
+.presets {
+            margin-top: 30px;
+            margin-right: var(--spacing-m);
+        }
+        
+        .preset-button {
+            width: 100%;
+            padding: var(--spacing-s);
+            margin-bottom: 8px;
+            border: 1px solid #ddd;
+            background: #f8f9fa;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .preset-button:hover {
+            background: #e9ecef;
+            border-color: #007AFF;
+        }
+        
+        .preset-button.active {
+            background: #007AFF;
+            color: white;
+            border-color: #007AFF;
+        }
+
+        .presets h4 {
+            padding-bottom: var(--spacing-xs);
+            color: #333;
+            font-weight: 600;
+        }
+
+
+
+/* ------------ research tools style--------------- */
+        
+.research-tools {
+            /* margin-top: 30px; */
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .research-button {
+        
+            padding: var(--spacing-xs);
+            margin-bottom: 8px;
+           border: 1px solid #ddd;
+            background: #f8f9fa;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            color: #333;
+        }
+        
+        .research-button:hover {
+            background: #e9ecef;
+            border-color: #007AFF;
+        }
+
+        /* .research-tools h4 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-s);
+            font-size: 14px;
+            color: #333;
+        } */
+
+/* ------------ current config style--------------- */ 
+
+.current-config {
+            width: 100%;
+            background: #f8f9fa;
+            padding: 25px var(--spacing-m);
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            margin: var(--spacing-s) 0;
+            font-family: monospace;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+.current-config h4 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-s);
+            font-size: 12px;
+            color: #333;
+        }
+
+/* Smooth scrolling for controls panel */
+.controls-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.controls-panel::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.controls-panel::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.controls-panel::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 968px) {
+    .experiment-one-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-s);
+    }
+
+    .controls-panel {
+        height: 60vh;
+        overflow-y: auto;
+    }
+
+    .preview-area {
+        position: relative;
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .experiment-one-container {
+        padding: var(--spacing-s);
+    }
+
+    .controls-panel, 
+    .preview-area {
+        padding: var(--spacing-s);
+    }
+
+    .toolkits-data {
+        margin-top: var(--spacing-m);
+        width: 100%;
+    }
+
+    .research-tools {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .research-button {
+        margin: 0;
+        width: 100%;
+        font-size: 11px;
+    }
+
+    .current-config {
+        width: 100%;
+        margin: var(--spacing-s) 0;
+    }
+
+    .presets {
+        margin-right: 0;
+    }
+
+    .test-button {
+        width: 140px;
+        height: 50px;
+        font-size: 14px;
+    }
+}
+
+
